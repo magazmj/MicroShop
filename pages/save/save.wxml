@@ -1,0 +1,12 @@
+<!--pages/save/save.wxml-->
+<view class="container">
+  <view class="saveCon">
+    <image src="{{imageSrc}}" mode='widthFix' bindtap='preview'></image>
+    <view class="tip">
+      <icon type='success'></icon>
+      <text>生成成功</text>
+    </view>
+    <button type='primary' bindtap='save' disabled='{{!saveEnable}}' loading='{{!saveEnable}}' style="background-color: #01c8a5">保存到相册</button>
+    <button type='normal' open-type='share'>发送给好友</button>
+  </view>
+</view>

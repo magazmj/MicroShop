@@ -1,0 +1,25 @@
+<!--pages/design/design.wxml-->
+<view class='container'>
+  <view class='designCon'>
+    <view class="wrapper">
+      <canvas class="canvas" canvas-id="myCanvas"/>
+      <canvas class="canvas" canvas-id="myCanvas{{index + 1}}" wx:key="*this" wx:for="{{canvasList}}" disable-scroll bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" bindtouchcancel="touchCancel"/>
+    </view>
+    <scroll-view class="templatelist" scroll-x hidden='{{hideTemplate}}' bindscrolltolower="loadMore">
+    <view wx:key="id" wx:for="{{list}}" class="tempcon {{templateId == item.id ? 'current' : ''}}">
+      <image src="{{host}}{{item.icon}}" bindtap='onSelectTemplate' data-idx="{{index}}"></image>
+    </view>  
+    </scroll-view>
+    <view class="bottom_holder"></view>
+    <view class='tabbar'>
+      <view class='baritem left' bindtap='toggleTemplate' hover-stay-time="10">
+        <image src="../../images/ic_pintu_gray.png"></image>
+        <text>更换模版</text>
+      </view>
+      <view class='baritem right' bindtap='generateImage' hover-stay-time="10">
+        <image src="../../images/ic_produce_white.png"></image>
+        <text>生成照片</text>
+      </view>
+    </view>
+  </view>
+</view>

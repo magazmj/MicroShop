@@ -1,0 +1,121 @@
+/* pages/design/design.wxss */
+.designCon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.wrapper {
+  flex: auto;
+  height: 100%;
+  width: 100%;
+  border-style: solid;
+  border-color: #eee;
+  border-width: 1rpx 0 0 0;
+  box-sizing: border-box;
+  background-color: #efeff4;
+  position: relative
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0
+}
+
+.tabbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: fixed;  
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 110rpx;
+  border-top: 1rpx solid #ccc;
+}
+
+.selected {
+  background-color: #0084ff
+}
+
+.baritem {
+  flex: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.left {
+  border-right: 1rpx solid #eee;
+  background-color: white 
+}
+
+.right {
+  background-color: #01c8a5
+}
+
+.baritem image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.baritem text {
+  font-size: 17px;
+  color: #353535;
+  margin-left: 10rpx;
+}
+
+.right text{
+  color: white;
+}
+
+.selected text {
+  color: white
+}
+
+.templatelist {
+  width: 100%;
+  height: 200rpx;
+  display: block;
+  flex-wrap: nowrap;
+  flex: none;
+  white-space: nowrap;
+  border-top: 1rpx solid #ccc;
+}
+
+.templatelist image {
+  width: 160rpx;
+  height: 160rpx;
+  margin-left: 5rpx;
+  margin-top: 5rpx;
+  background-color: white;
+}
+
+.tempcon {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 10rpx;
+  display: inline-block;
+  border: 5rpx solid white;
+  box-sizing: border-box
+}
+
+.current {
+  border: 5rpx solid #01c8a5 
+}
+
+.bottom_holder {
+  height: 110rpx; 
+  flex:none
+}

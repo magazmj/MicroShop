@@ -1,0 +1,36 @@
+/* pages/save/save.wxss */
+.saveCon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #efeff4
+}
+
+.saveCon image {
+  margin-top: 100rpx;
+  width: 33%;
+}
+
+.tip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 50rpx;
+  margin-bottom: 100rpx;
+}
+
+.tip text {
+  color: #09bb07;
+  margin-left: 16rpx;
+  font-size: 18px;
+}
+
+.saveCon button {
+  align-self: stretch;
+  margin: 30rpx;
+  margin-top: 0rpx
+}

@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="main_container">
+    <scroll-view class='contentCon' scroll-y bindscrolltolower="loadMore">
+      <image wx:key="id" wx:for="{{list}}" src="{{host}}{{item.image}}" mode='widthFix' bindtap='onSelectItem' data-idx='{{index}}'></image>
+      <view>
+        <view wx:if="{{hasMore}}" class="loadmore" hidden='{{list.length == 0}}'>
+          <icon type="waiting" color="#01c8a5" size="20"/>
+          <text>玩命的加载中...</text>
+        </view>
+        <view wx:else class="loadmore"  hidden='{{list.length == 0}}'><text>没有更多内容了</text></view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

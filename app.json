@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/design/design",
+    "pages/store/store",
+    "pages/my/my",
+    "pages/save/save",
+    "pages/portal/portal"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "微商海报大师",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "拼图",
+        "iconPath": "./images/ic_pintu_gray.png",
+        "selectedIconPath": "./images/ic_pintu_cyan.png"
+      },
+      {
+        "pagePath": "pages/store/store",
+        "text": "海报",
+        "iconPath": "./images/icon_portal_gray.png",
+        "selectedIconPath": "./images/icon_portal_cyan.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./images/ic_me_normal_gray.png",
+        "selectedIconPath": "./images/ic_me_cyan.png"
+      }
+    ],
+    "color": "#7f8c98",
+    "selectedColor": "#01c8a5",
+    "backgroundColor": "#f7f7fa"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

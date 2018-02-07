@@ -1,0 +1,38 @@
+<!--pages/portal/portal.wxml-->
+<view class='container'>
+  <view class='designCon'>
+    <view class="wrapper">
+      <canvas class="canvas" canvas-id="myCanvas" disable-scroll/>
+      <canvas class="canvas" canvas-id="myCanvas{{index + 1}}" wx:key="*this" wx:for="{{canvasList}}" disable-scroll bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" bindtouchcancel="touchCancel"/>
+    </view>
+    <scroll-view class="templatelist" scroll-x hidden='{{hideTemplate}}' bindscrolltolower="loadMore">
+      <block wx:if="{{list.length > 0}}">
+        <view wx:key="id" wx:for="{{list}}" class="tempcon {{templateId == item.id ? 'current' : ''}}">
+          <image src="{{host}}{{item.icon}}" bindtap='onSelectTemplate' data-idx="{{index}}" mode='widthFix'></image>
+        </view>  
+      </block>
+      <text wx:else class="tip">没有收藏</text>
+    </scroll-view>
+    <view class='inputCon' hidden='{{hideInput}}'>
+      <input type='text' confirm-type='done' value="{{hint}}" focus="{{!hideInput}}" bindinput="typeText" bindconfirm='inputDone' bindfocus="inputFocus" cursor='{{cursor}}' bindblur='inputBlur'></input>
+      <text bindtap='inputDone'>完成</text>
+    </view>
+    <view class="bottom_holder"></view>
+    <view class='tabbar'>
+      <view class='baritem left'>
+        <view class="subtab" bindtap='favorite' hover-stay-time="10">
+          <image src="{{faved?'../../images/ic_favorite_selected.png':'../../images/ic_favorite_gray.png'}}"></image>
+          <text>收藏模版</text>
+        </view>
+        <view class="subtab" bindtap='toggleTemplate' hover-stay-time="10">
+          <image src="../../images/icon_collection_gray.png"></image>
+          <text>已收藏</text>
+        </view>
+      </view>
+      <view class='baritem right' bindtap='generateImage' hover-stay-time="10">
+        <image src="../../images/ic_produce_white.png"></image>
+        <text>生成照片</text>
+      </view>
+    </view>
+  </view>
+</view>

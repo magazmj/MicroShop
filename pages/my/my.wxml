@@ -1,0 +1,40 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <view class="me_container">
+    <view class="userinfo">
+      <image src='{{userInfo.avatarUrl}}'></image>
+      <text>{{userInfo.nickName}}</text>
+    </view>
+
+    <view class="menu_container">
+      <view class="menu" style="justify-content: flex-start;">
+        <text style="display: inline-flex; flex: auto; margin-left:32rpx; line-height: 90rpx; height: 90rpx;">版本号</text>
+        <text style='display: inline-flex; color: #999999; margin-left: 0; flex: none; padding-right: 32rpx; line-height: 90rpx; height: 90rpx;'>V1.0</text>
+      </view>
+      <view class="menu" style="display:flex; flex-direction: column; align-items: flex-start; background-color: white; height: inherit; justify-content: flex-start; padding-bottom: 30rpx">
+        <text style="border-width: 0; line-height: 30rpx; heigth:60rpx; margin-left:32rpx; flex: none; margin-top: 20rpx; line-height: 50rpx; height: 50rpx;">关于我们</text>
+        <text style='border-width: 0; color: #999999; margin-left: 32rpx; margin-top:5px; line-height: normal; flex: none; font-size: 13px'>从一成不变的九张商品照片，到精美的海报宣传图，微商拼图大师，让你的朋友圈从此不再被好友屏蔽。做微商，要美丽，更自信！</text>
+      </view>
+      <view class="menu" hover-class="menu_hover" bindtap='template' hidden='{{true}}'>
+        <image src="../../images/ic_produce_blue.png"></image>
+        <text>已生成模版</text>
+      </view>
+      <view class="menu" hover-class="menu_hover" bindtap='favorate' hidden='{{true}}'>
+        <image src="../../images/ic_favorite_blue.png"></image>
+        <text>我的收藏</text>
+      </view>
+      <view class="menu" hover-class="menu_hover" bindtap='share' hidden='{{true}}'>
+        <image src="../../images/ic_share_blue.png"></image>
+        <text>分享给好友</text>
+      </view>
+      <view class="menu" hover-class="menu_hover" bindtap='feedback' hidden='{{true}}'>
+        <image src="../../images/ic_feedback_blue.png"></image>
+        <text>反馈问题</text>
+      </view>
+      <view class="menu" hover-class="menu_hover" bindtap='about'  hidden='{{true}}'>
+        <image src="../../images/ic_about_blue.png"></image>
+        <text>关于我们</text>
+      </view>
+    </view>
+  </view>
+</view>
